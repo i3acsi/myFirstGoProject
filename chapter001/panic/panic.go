@@ -56,9 +56,14 @@ func process(data []string, length int) {
 			log.Printf("panicing: %v\n", val)
 		}
 	}()
-	writeData(data, length)
+	filename, err := writeData(data, length)
 	fmt.Println("this 'll not execute on panic")
-
+	if len(filename) > 0 {
+		fmt.Printf("file \"%v\" was created;\n", filename)
+	}
+	if err != nil {
+		fmt.Println(err)
+	}
 }
 
 func main() {
