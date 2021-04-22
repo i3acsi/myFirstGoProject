@@ -19,6 +19,10 @@ type NickNamed interface {
 }
 
 func joinChat(nn NickNamed) {
+	p, ok := nn.(person)
+	if ok {
+		_ = p.name
+	}
 	fmt.Println(nn.NickName() + " has joined.")
 }
 
