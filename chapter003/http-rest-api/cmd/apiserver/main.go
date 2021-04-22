@@ -4,7 +4,7 @@ import (
 	"flag"
 	"github.com/BurntSushi/toml"
 	"log"
-	"myFirstGoProject/chapter003/http-rest-api/internal/app/apiserver"
+	"src/myFirstGoProject/chapter003/http-rest-api/internal/app/apiserver"
 )
 
 var (
