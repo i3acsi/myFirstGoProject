@@ -1,0 +1,2 @@
+migrate create -ext sql -dir migrations create_users
+migrate -path "./migrations" -database postgres://postgres:password@localhost/restapi_test?sslmode=disable up
